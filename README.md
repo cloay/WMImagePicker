@@ -1,7 +1,7 @@
 # WMImagePicker 
 ## WMImagePicker是一个图片选择组件，可调取摄像头和图库。
 
-<img src="https://github.com/cloay/WMImagePicker/blob/master/demo_multiple.png" width="420" height="640"/>
+<img src="https://github.com/cloay/WMImagePicker/blob/master/demo_multiple.png" width="330" height="640"/>
 
 ## 主要功能特点：
 1、图片选择UI类似微信支持多图选择</br>
