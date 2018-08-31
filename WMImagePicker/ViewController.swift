@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     lazy var imagePicker: WMImagePicker? = {
-        return WMImagePicker()
+//        return WMImagePicker()
+        return WMImagePicker(pickerType: .multiple, pickerMaxCount: 4)
     }()
     
     @IBOutlet weak var imgView: UIImageView!
@@ -22,6 +23,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func setAvatarBtnOnClick(_ sender: Any) {
+//        imagePicker?.pickerType = .multiple
+//        imagePicker?.pickerMaxCount = 4
         imagePicker?.showIn(self, didSelectedImageBlock: { images in
             self.imgView.image = images.first?.thumbnail
         })

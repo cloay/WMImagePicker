@@ -67,21 +67,23 @@ class WMImagePicker: UIViewController, UINavigationControllerDelegate, UIImagePi
             self.present(nav, animated: true, completion: nil)
         }))
         
-        actionSheet.addAction(UIAlertAction.init(title: "拍照", style: .default, handler: { action in
-            let status = AVCaptureDevice.authorizationStatus(for: .video)
-            if status == .denied || status == .restricted {
-                self.showAlert(pesentVc: self, title: "提示", message: "尚未开启相机权限，您可以去设置->隐私->相机，设置开启", handler: { action in
-                    UIApplication.shared.openURL(URL.init(string: UIApplicationOpenSettingsURLString)!)
-                })
-                return
-            }
-            let imagePicker = UIImagePickerController()
-            imagePicker.sourceType = .camera;
-            imagePicker.delegate = self
-            imagePicker.showsCameraControls = true
-            imagePicker.cameraCaptureMode = .photo
-            self.present(imagePicker, animated: true, completion: nil)
-        }))
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            actionSheet.addAction(UIAlertAction.init(title: "拍照", style: .default, handler: { action in
+                let status = AVCaptureDevice.authorizationStatus(for: .video)
+                if status == .denied || status == .restricted {
+                    self.showAlert(pesentVc: self, title: "提示", message: "尚未开启相机权限，您可以去设置->隐私->相机，设置开启", handler: { action in
+                        UIApplication.shared.openURL(URL.init(string: UIApplicationOpenSettingsURLString)!)
+                    })
+                    return
+                }
+                let imagePicker = UIImagePickerController()
+                imagePicker.sourceType = .camera;
+                imagePicker.delegate = self
+                imagePicker.showsCameraControls = true
+                imagePicker.cameraCaptureMode = .photo
+                self.present(imagePicker, animated: true, completion: nil)
+            }))
+        }
         
         actionSheet.addAction(UIAlertAction.init(title: "取消", style: .cancel, handler: { action in
             self.dismiss(animated: false, completion: nil)
