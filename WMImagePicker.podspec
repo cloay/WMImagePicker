@@ -10,13 +10,13 @@ Pod::Spec.new do |s|
 3、支持图片库、照相机访问权限提示
                    DESC
 
-  s.homepage     = "https://www.cloay.com"
+  s.homepage     = "http://www.cloay.com"
   s.license      = "MIT"
 
 
   s.author             = { "shangweimin" => "shangrody@gmail.com" }
   s.platform     = :ios, "9.0"
-
+  s.swift_version = '4.0'
   
   s.source       = { :git => "https://shangweimin@gitlab.tftiancai.com/shangweimin/TCBaseModule-iOS.git", :tag => s.version.to_s }
   s.source_files  = "Source/**/*.swift"

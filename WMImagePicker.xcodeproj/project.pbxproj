@@ -46,6 +46,7 @@
 		406F23B021391472009E45FD = {
 			isa = PBXGroup;
 			children = (
+				406F23CE21391707009E45FD /* Source */,
 				406F23BB21391472009E45FD /* WMImagePicker */,
 				406F23BA21391472009E45FD /* Products */,
 			);
@@ -62,7 +63,6 @@
 		406F23BB21391472009E45FD /* WMImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				406F23CE21391707009E45FD /* Source */,
 				406F23BC21391472009E45FD /* AppDelegate.swift */,
 				406F23BE21391472009E45FD /* ViewController.swift */,
 				406F23C021391472009E45FD /* Main.storyboard */,
