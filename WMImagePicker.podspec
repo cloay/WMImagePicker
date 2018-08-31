@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "WMImagePicker"
-  s.version      = "0.3"
+  s.version      = "0.4"
   s.summary      = "WMImagePicker简单的图片i选择组件"
   s.description  = <<-DESC
 简单的图片选择组件，使用方便
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.swift_version = '4.0'
   
-  s.source       = { :git => "https://shangweimin@gitlab.tftiancai.com/shangweimin/TCBaseModule-iOS.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/cloay/WMImagePicker.git", :tag => s.version.to_s }
   s.source_files  = "Source/**/*.swift"
   # s.exclude_files = "README.md"
 
