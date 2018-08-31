@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "WMImagePicker"
-  s.version      = "0.0.1"
+  s.version      = "0.2"
   s.summary      = "WMImagePicker简单的图片i选择组件"
   s.description  = <<-DESC
 简单的图片选择组件，使用方便
